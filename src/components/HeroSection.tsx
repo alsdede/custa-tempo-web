@@ -1,27 +1,27 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
-
-
+import { useTranslations } from 'next-intl';
 
 export default function HeroSection() {
+  const t = useTranslations('hero');
+  
   return (
   <section className="max-w-content mx-auto flex justify-center gap-10 py-20">
 
       {/* Left side */}
       <div className="flex flex-col justify-between gap-4  max-w-[258px]">
       <h1 className={`text-[20px] font-black text-black`}>
-  A moeda mais valiosa do mundo é o{" "}
-  <span className="text-primary">tempo.</span>
-</h1>
+        {t('title')}{" "}
+        <span className="text-primary">{t('subtitle')}</span>
+      </h1>
         <p
           className={`text-[12px] font-medium text-black`}
         >
-          Saber o quanto você precisa gastar para comprar qualquer coisa é fundamental para ter consciência financeira e tomar decisões mais inteligentes.
+          {t('description')}
         </p>
         <Button className={` font-inter inline-flex items-center gap-2 bg-[#0047D6]`}>
           <ArrowRight size={16} />
-          Adicionar ao Chrome, é grátis!
+          {t('cta')}
         </Button>
       </div>
 

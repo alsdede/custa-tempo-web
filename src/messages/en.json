@@ -1,0 +1,59 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About"
+  },
+  "hero": {
+    "title": "The most valuable currency in the world is",
+    "subtitle": "time.",
+    "description": "Knowing how much you need to spend to buy anything is essential for financial awareness and making smarter decisions.",
+    "cta": "Add to Chrome, it's free!"
+  },
+  "carousel": {
+    "title": "In practice",
+    "subtitle": "How many work hours are needed to buy these products?",
+    "description": "Check the calculation for those earning minimum wage:",
+    "salary": "Minimum wage 2025:",
+    "workload": "Working hours:",
+    "hourly": "Your hourly wage is",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Min", 
+    "seconds": "Sec"
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "nowUse": "Now just use it...",
+    "step1": {
+      "title": "Install",
+      "description": "Click the button below and install directly from the store. It's safe and free.",
+      "button": "Install"
+    },
+    "step2": {
+      "title": "Information",
+      "description": "Enter information about days and hours worked in the goal to know how much you earn per hour."
+    },
+    "step3": {
+      "title": "Ready!",
+      "description": "Now you can check how much time each thing you want to buy costs."
+    },
+    "usage1": {
+      "title": "Whenever you want",
+      "description": "Click on the extension, enter the desired value and see how much you'll need to work to buy."
+    },
+    "usage2": {
+      "title": "A shortcut",
+      "description": "Select any number directly from the browser, click easily and click on the extension."
+    },
+    "usage3": {
+      "title": "Checkout",
+      "description": "In major stores, you find the hours information directly at checkout, without having to do anything."
+    }
+  },
+  "language": {
+    "switch": "Change language",
+    "portuguese": "Portuguese",
+    "english": "English",
+    "spanish": "Spanish"
+  }
+}

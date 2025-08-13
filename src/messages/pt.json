@@ -1,0 +1,59 @@
+{
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre"
+  },
+  "hero": {
+    "title": "A moeda mais valiosa do mundo é o",
+    "subtitle": "tempo.",
+    "description": "Saber o quanto você precisa gastar para comprar qualquer coisa é fundamental para ter consciência financeira e tomar decisões mais inteligentes.",
+    "cta": "Adicionar ao Chrome, é grátis!"
+  },
+  "carousel": {
+    "title": "Na prática", 
+    "subtitle": "Quantas horas de trabalho são necessárias para comprar esses produtos?",
+    "description": "Confira o cálculo pra quem ganha salário mínimo:",
+    "salary": "Salário mínimo 2025:",
+    "workload": "Carga horária:",
+    "hourly": "Sua ganha por hora é",
+    "days": "Dias",
+    "hours": "Horas", 
+    "minutes": "Min",
+    "seconds": "Seg"
+  },
+  "howItWorks": {
+    "title": "Como funciona",
+    "nowUse": "Agora é só usar...",
+    "step1": {
+      "title": "Instalar",
+      "description": "Clique no botão abaixo e instale direto da loja. É seguro e gratuito.",
+      "button": "Instalar"
+    },
+    "step2": {
+      "title": "Informações", 
+      "description": "Insira as informações de dias e horas trabalhadas na meta pra saber o quanto você recebe por hora."
+    },
+    "step3": {
+      "title": "Pronto!",
+      "description": "Agora você já pode conferir quanto tempo custa cada coisa que quer comprar."
+    },
+    "usage1": {
+      "title": "Quando você quiser",
+      "description": "Clique na extensão, insira o valor desejado e veja o quanto você precisará trabalhar para comprar."
+    },
+    "usage2": {
+      "title": "Um atalho",
+      "description": "Selecione qualquer número direto do navegador, clique bem fácil direto e clique na extensão."
+    },
+    "usage3": {
+      "title": "Checkout",
+      "description": "Nos principais lojas, você encontra a informação de horas direto no checkout, sem precisar fazer nada."
+    }
+  },
+  "language": {
+    "switch": "Mudar idioma",
+    "portuguese": "Português",
+    "english": "Inglês", 
+    "spanish": "Espanhol"
+  }
+}

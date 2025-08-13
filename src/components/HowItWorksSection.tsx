@@ -2,66 +2,64 @@
 
 import * as React from "react"
 import Image from "next/image"
+import { useTranslations } from 'next-intl'
 
 interface StepData {
   id: string
   number: string
-  title: string
-  description: string
+  titleKey: string
+  descriptionKey: string
   hasButton?: boolean
-  buttonText?: string
+  buttonTextKey?: string
 }
 
 const steps: StepData[] = [
   {
     id: "1",
     number: "1.",
-    title: "Instalar",
-    description: "Clique no botão abaixo e instale direto da loja. É seguro e gratuito.",
+    titleKey: "step1.title",
+    descriptionKey: "step1.description",
     hasButton: true,
-    buttonText: "Instalar"
+    buttonTextKey: "step1.button"
   },
   {
     id: "2", 
     number: "2.",
-    title: "Informações",
-    description: "Insira as informações de dias e horas trabalhadas na meta pra saber o quanto você recebe por hora.",
-    hasButton: false
+    titleKey: "step2.title",
+    descriptionKey: "step2.description"
   },
   {
     id: "3",
     number: "3.",
-    title: "Pronto!",
-    description: "Agora você já pode conferir quanto tempo custa cada coisa que quer comprar.",
-    hasButton: false
+    titleKey: "step3.title", 
+    descriptionKey: "step3.description"
   }
 ]
 
 const usageSteps: StepData[] = [
   {
-    id: "1",
-    number: "1.",
-    title: "Quando você quiser",
-    description: "Clique na extensão, insira o valor desejado e veja o quanto você precisará trabalhar para comprar.",
-    hasButton: false
-  },
-  {
-    id: "2",
-    number: "2.", 
-    title: "Um atalho",
-    description: "Selecione qualquer número direto do navegador, clique bem fácil direto e clique na extensão.",
-    hasButton: false
-  },
-  {
     id: "4",
-    number: "4.",
-    title: "Checkout",
-    description: "Nos principais lojas, você encontra a informação de horas direto no checkout, sem precisar fazer nada.",
-    hasButton: false
+    number: "1.",
+    titleKey: "usage1.title",
+    descriptionKey: "usage1.description"
+  },
+  {
+    id: "5",
+    number: "2.",
+    titleKey: "usage2.title", 
+    descriptionKey: "usage2.description"
+  },
+  {
+    id: "6",
+    number: "3.",
+    titleKey: "usage3.title",
+    descriptionKey: "usage3.description"
   }
 ]
 
 function StepCard({ step }: { step: StepData }) {
+  const t = useTranslations('howItWorks');
+  
   return (
     <div className="flex flex-col items-center">
       {/* GIF Placeholder */}
@@ -72,13 +70,13 @@ function StepCard({ step }: { step: StepData }) {
       {/* Content */}
       <div className="text-center space-y-3">
         <h3 className="text-black text-base font-bold tracking-[0.5px]">
-          {step.number} {step.title}
+          {step.number} {t(step.titleKey)}
         </h3>
         <p className="text-black text-xs font-medium leading-relaxed">
-          {step.description}
+          {t(step.descriptionKey)}
         </p>
         
-        {step.hasButton && (
+        {step.hasButton && step.buttonTextKey && (
           <button className="bg-[#0047D6] text-white px-4 py-2 rounded-lg flex items-center gap-2 mx-auto mt-4">
             <Image 
               src="/chrome-logo.png" 
@@ -88,7 +86,7 @@ function StepCard({ step }: { step: StepData }) {
               className="w-4 h-4"
             />
             <span className="text-base font-medium tracking-[0.5px]">
-              {step.buttonText}
+              {t(step.buttonTextKey)}
             </span>
           </button>
         )}
@@ -98,16 +96,17 @@ function StepCard({ step }: { step: StepData }) {
 }
 
 export default function HowItWorksSection() {
+  const t = useTranslations('howItWorks');
+  
   return (
     <section className="py-12 px-4">
       <div className="max-w-6xl mx-auto">
         {/* First Section: Como funciona */}
         <div className="mb-12">
           <h2 className="text-black text-[32px] font-black tracking-[0.5px] mb-6 text-start">
-            Como funciona
+            {t('title')}
           </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {steps.map((step) => (
               <StepCard key={step.id} step={step} />
             ))}
@@ -116,11 +115,10 @@ export default function HowItWorksSection() {
 
         {/* Second Section: Agora é só usar */}
         <div>
-          <h2 className="text-black text-2xl font-medium tracking-[0.5px] mb-6 text-start">
-            Agora é só usar...
+          <h2 className="text-black text-[32px] font-black tracking-[0.5px] mb-6 text-start">
+            {t('nowUse')}
           </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {usageSteps.map((step) => (
               <StepCard key={step.id} step={step} />
             ))}

@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "./ui/card";
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
 
 interface ProductData {
   id: string;
@@ -141,6 +142,8 @@ function calculateDateRange(workDays: number): string {
 }
 
 function ProductCard({ product }: { product: ProductData }) {
+  const t = useTranslations('carousel');
+  
   return (
     <Card className="w-full max-w-sm mx-auto bg-white rounded-2xl  overflow-hidden border-none">
       <CardContent className="p-4 flex flex-col items-center">
@@ -166,21 +169,21 @@ function ProductCard({ product }: { product: ProductData }) {
         <div className="flex justify-between items-center bg-[#FF5B10] p-2 rounded-[8px] w-full mb-4">
           <div className="text-white flex flex-col items-center w-full">
             <p className=" text-[12px] font-extrabold">{product.workDays}</p>
-            <p className="font-inter text-[8px] font-medium">Dias</p>
+            <p className="font-inter text-[8px] font-medium">{t('days')}</p>
           </div>
           {/* separator */}
           <div className="h-6 w-px bg-white opacity-50"></div>
           {/* separator */}
           <div className="text-white flex flex-col items-center w-full">
             <p className=" text-[12px] font-extrabold">{product.workHours}</p>
-            <p className="font-inter text-[8px] font-medium">Horas</p>
+            <p className="font-inter text-[8px] font-medium">{t('hours')}</p>
           </div>
           {/* separator */}
           <div className="h-6 w-px bg-white opacity-50"></div>
           {/* separator */}
           <div className="text-white  flex flex-col items-center w-full">
             <p className=" text-[12px] font-extrabold">{product.workMinutes}</p>
-            <p className="font-inter text-[8px] font-medium">Min.</p>
+            <p className="font-inter text-[8px] font-medium">{t('minutes')}</p>
           </div>
           {/* separator */}
           <div className="h-6 w-px bg-white opacity-50"></div>
@@ -189,7 +192,7 @@ function ProductCard({ product }: { product: ProductData }) {
             <p className=" text-[12px] font-extrabold">
               {product.totalSeconds}
             </p>
-            <p className="font-inter text-[8px] font-medium">Seg.</p>
+            <p className="font-inter text-[8px] font-medium">{t('seconds')}</p>
           </div>
         </div>
 
@@ -258,6 +261,8 @@ function ProductCard({ product }: { product: ProductData }) {
 }
 
 export default function CarouselSection() {
+  const t = useTranslations('carousel');
+  
   return (
     <section className="p-11 bg-[#FFF2E8] rounded-[32px]">
       <div className="max-w-7xl mx-auto">
@@ -267,28 +272,27 @@ export default function CarouselSection() {
           <div className="max-w-[195px]">
             <div className="">
               <h2 className="text-xl font-black text-black mb-2 leading-[24px]">
-                Na prática
+                {t('title')}
               </h2>
               <p className="text-[12px] text-[#585858] mb-3 font-medium leading-[14px]">
-                Quantas horas de trabalho são necessárias para comprar esses
-                produtos?
+                {t('subtitle')}
               </p>
               <p className="text-[12px] text-[#585858] mb-4 font-medium leading-[14px]">
-                Confira o cálculo pra quem ganha salário mínimo:
+                {t('description')}
               </p>
 
               <div className="bg-white p-4 rounded-[12px] flex flex-col items-center gap-4 justify-center">
          
                   <div className="flex flex-col text-center">
                     <p className="text-[10px] text-[#585858] mb-1 font-medium leading-3">
-                      Salário mínimo 2025:
+                      {t('salary')}
                     </p>
                     <p className="text-[12px] font-extrabold text-black leading-[14px]">
                       R$ 1.518,00
                     </p>
                   </div>
                   <div className="flex flex-col text-center">
-                    <p className="text-[10px] text-[#585858]">Carga horária:</p>
+                    <p className="text-[10px] text-[#585858]">{t('workload')}</p>
                                    <p className="text-[12px] font-extrabold text-black leading-[14px]">
                       8h / dia | 220h / mês
                     </p>
@@ -297,7 +301,7 @@ export default function CarouselSection() {
 
                 <div className="bg-[#FF5B10] text-white rounded-lg p-2 text-center w-full">
                   <p className="text-[8px] font-inter font-medium">
-                    Sua ganha por hora é
+                    {t('hourly')}
                   </p>
                   <p className="text-[12px] font-extrabold">R$ 6,90 / hora</p>
                 </div>

@@ -1,0 +1,59 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Acerca de"
+  },
+  "hero": {
+    "title": "La moneda más valiosa del mundo es el",
+    "subtitle": "tiempo.",
+    "description": "Saber cuánto necesitas gastar para comprar cualquier cosa es fundamental para tener conciencia financiera y tomar decisiones más inteligentes.",
+    "cta": "Añadir a Chrome, ¡es gratis!"
+  },
+  "carousel": {
+    "title": "En la práctica",
+    "subtitle": "¿Cuántas horas de trabajo se necesitan para comprar estos productos?",
+    "description": "Revisa el cálculo para quienes ganan salario mínimo:",
+    "salary": "Salario mínimo 2025:",
+    "workload": "Carga horaria:",
+    "hourly": "Tu ganancia por hora es",
+    "days": "Días",
+    "hours": "Horas",
+    "minutes": "Min",
+    "seconds": "Seg"
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "nowUse": "Ahora solo úsalo...",
+    "step1": {
+      "title": "Instalar",
+      "description": "Haz clic en el botón de abajo e instala directamente desde la tienda. Es seguro y gratuito.",
+      "button": "Instalar"
+    },
+    "step2": {
+      "title": "Información",
+      "description": "Ingresa la información de días y horas trabajadas en la meta para saber cuánto recibes por hora."
+    },
+    "step3": {
+      "title": "¡Listo!",
+      "description": "Ahora ya puedes verificar cuánto tiempo cuesta cada cosa que quieres comprar."
+    },
+    "usage1": {
+      "title": "Cuando quieras",
+      "description": "Haz clic en la extensión, ingresa el valor deseado y ve cuánto necesitarás trabajar para comprar."
+    },
+    "usage2": {
+      "title": "Un atajo",
+      "description": "Selecciona cualquier número directamente del navegador, haz clic fácilmente y haz clic en la extensión."
+    },
+    "usage3": {
+      "title": "Checkout",
+      "description": "En las principales tiendas, encuentras la información de horas directamente en el checkout, sin necesidad de hacer nada."
+    }
+  },
+  "language": {
+    "switch": "Cambiar idioma",
+    "portuguese": "Portugués",
+    "english": "Inglés",
+    "spanish": "Español"
+  }
+}
